@@ -83,7 +83,6 @@
       "projectType": "application"
     }
   },
-  "defaultProject": "taskana-web",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "taskana",

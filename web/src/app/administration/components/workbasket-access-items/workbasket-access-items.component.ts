@@ -13,7 +13,7 @@ import {
 } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Actions, ofActionCompleted, Select, Store } from '@ngxs/store';
-import { FormArray, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, Validators } from '@angular/forms';
 
 import { Workbasket } from 'app/shared/models/workbasket';
 import { customFieldCount, WorkbasketAccessItems } from 'app/shared/models/workbasket-access-items';
@@ -89,15 +89,15 @@ export class WorkbasketAccessItemsComponent implements OnInit, OnChanges, OnDest
 
   constructor(
     private requestInProgressService: RequestInProgressService,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     public formsValidatorService: FormsValidatorService,
     private notificationsService: NotificationService,
     private store: Store,
     private ngxsActions$: Actions
   ) {}
 
-  get accessItemsGroups(): FormArray {
-    return this.AccessItemsForm.get('accessItemsGroups') as FormArray;
+  get accessItemsGroups(): UntypedFormArray {
+    return this.AccessItemsForm.get('accessItemsGroups') as UntypedFormArray;
   }
 
   ngOnInit() {

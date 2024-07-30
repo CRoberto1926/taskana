@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Observable, Subject } from 'rxjs';
 import { FormsValidatorService } from 'app/shared/services/forms-validator/forms-validator.service';
 import { WorkbasketAccessItems } from 'app/shared/models/workbasket-access-items';
@@ -36,7 +36,7 @@ export class AccessItemsManagementComponent implements OnInit {
   isRequired: boolean = false;
   accessIdName: string;
   panelState: boolean = false;
-  accessItemsForm: FormGroup;
+  accessItemsForm: UntypedFormGroup;
   accessId: AccessId;
   groups: AccessId[];
   permissions: AccessId[];
@@ -58,7 +58,7 @@ export class AccessItemsManagementComponent implements OnInit {
   destroy$ = new Subject<void>();
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private formsValidatorService: FormsValidatorService,
     private notificationService: NotificationService,
     private store: Store,
@@ -152,10 +152,10 @@ export class AccessItemsManagementComponent implements OnInit {
     }
     this.accessItemsForm.setControl('accessItemsGroups', AccessItemsFormArray);
     if (!this.accessItemsForm.value.workbasketKeyFilter) {
-      this.accessItemsForm.addControl('workbasketKeyFilter', new FormControl());
+      this.accessItemsForm.addControl('workbasketKeyFilter', new UntypedFormControl());
     }
     if (!this.accessItemsForm.value.accessIdFilter) {
-      this.accessItemsForm.addControl('accessIdFilter', new FormControl());
+      this.accessItemsForm.addControl('accessIdFilter', new UntypedFormControl());
     }
     this.accessItems = accessItems;
     if (this.accessItemsForm.value.workbasketKeyFilter || this.accessItemsForm.value.accessIdFilter) {
@@ -217,8 +217,8 @@ export class AccessItemsManagementComponent implements OnInit {
     );
   }
 
-  get accessItemsGroups(): FormArray {
-    return this.accessItemsForm ? (this.accessItemsForm.get('accessItemsGroups') as FormArray) : null;
+  get accessItemsGroups(): UntypedFormArray {
+    return this.accessItemsForm ? (this.accessItemsForm.get('accessItemsGroups') as UntypedFormArray) : null;
   }
 
   get accessItemsPermissions(): FormArray {

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { AccessIdsService } from '../../services/access-ids/access-ids.service';
 import { debounceTime, distinctUntilChanged, Observable, Subject } from 'rxjs';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { AccessId } from '../../models/access-id';
 import { map, take, takeUntil } from 'rxjs/operators';
 import { Select } from '@ngxs/store';
@@ -37,8 +37,8 @@ export class TypeAheadComponent implements OnInit, OnDestroy {
   filteredAccessIds: AccessId[] = [];
   debounceTime: number = 750;
   destroy$ = new Subject<void>();
-  accessIdForm = new FormGroup({
-    accessId: new FormControl('')
+  accessIdForm = new UntypedFormGroup({
+    accessId: new UntypedFormControl('')
   });
   emptyAccessId: AccessId = { accessId: '', name: '' };
 

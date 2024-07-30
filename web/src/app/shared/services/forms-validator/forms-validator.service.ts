@@ -1,4 +1,4 @@
-import { FormArray, NgForm, NgModel } from '@angular/forms';
+import { UntypedFormArray, NgForm, NgModel } from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { AccessIdsService } from 'app/shared/services/access-ids/access-ids.service';
 import { NotificationService } from '../notifications/notification.service';
@@ -61,7 +61,7 @@ export class FormsValidatorService {
     return values[0] && responseOwner.valid;
   }
 
-  async validateFormAccess(form: FormArray, toggleValidationAccessIdMap: Map<any, boolean>): Promise<boolean> {
+  async validateFormAccess(form: UntypedFormArray, toggleValidationAccessIdMap: Map<any, boolean>): Promise<boolean> {
     const ownerPromise: Array<Promise<boolean>> = new Array<Promise<boolean>>();
 
     for (let i = 0; i < form.length; i++) {
