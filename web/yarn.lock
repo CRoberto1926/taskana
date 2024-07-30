@@ -3467,16 +3467,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ngxs/devtools-plugin@npm:3.7.3":
-  version: 3.7.3
-  resolution: "@ngxs/devtools-plugin@npm:3.7.3"
+"@ngxs/devtools-plugin@npm:3.7.6":
+  version: 3.7.6
+  resolution: "@ngxs/devtools-plugin@npm:3.7.6"
   dependencies:
     tslib: "npm:^1.9.0"
   peerDependencies:
-    "@angular/core": ">=6.1.0 <14.0.0"
-    "@ngxs/store": ^3.7.3 || ^3.7.3-dev
+    "@angular/core": ">=6.1.0 <16.0.0"
+    "@ngxs/store": ^3.7.6 || ^3.7.6-dev
     rxjs: ">=6.5.5"
-  checksum: 10c0/5505017b91780e16fb2c599081ed5f90526f96cb98d719886449435123ab02daf0b9ef0e7d5d3ec685edf81850a73c0089e1abf4223b82d1155285003d767010
+  checksum: 10c0/bb5e0d4a8e1fb8a331212e7357aec0a30fd092298cf4a53702323b857263c3c3a155993db4cb0f5851c339a8dc1e84582864059c2d3e86bdf4706b5fbbbb6e54
   languageName: node
   linkType: hard
 
@@ -14412,7 +14412,7 @@ __metadata:
     "@circlon/angular-tree-component": "npm:11.0.4"
     "@ngneat/hot-toast": "npm:4.1.0"
     "@ngneat/overview": "npm:3.0.4"
-    "@ngxs/devtools-plugin": "npm:3.7.3"
+    "@ngxs/devtools-plugin": "npm:3.7.6"
     "@ngxs/router-plugin": "npm:3.7.3"
     "@ngxs/store": "npm:3.7.3"
     "@types/jest": "npm:27.4.1"
