@@ -43,7 +43,7 @@
     "lodash": "4.17.21",
     "ng2-charts": "5.0.4",
     "ngx-bootstrap": "^18.0.2",
-    "ngx-infinite-scroll": "16.0.0",
+    "ngx-infinite-scroll": "^18.0.0",
     "rxjs": "7.5.5",
     "tslib": "2.3.1",
     "zone.js": "0.14.8"
