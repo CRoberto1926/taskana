@@ -6324,7 +6324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buffer-from@npm:^1.0.0":
+"buffer-from@npm:1.x, buffer-from@npm:^1.0.0":
   version: 1.1.2
   resolution: "buffer-from@npm:1.1.2"
   checksum: 10c0/124fff9d66d691a86d3b062eff4663fe437a9d9ee4b47b1b9e97f5a5d14f6d5399345db80f796827be7c95e70a8e765dd404b7c3ff3b3324f98e9b0c8826cc34
@@ -11561,7 +11561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:4.17.21, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.21, lodash@npm:^4.7.0":
+"lodash@npm:4.17.21, lodash@npm:4.x, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.21, lodash@npm:^4.7.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 10c0/d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
@@ -12052,6 +12052,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mkdirp@npm:1.x, mkdirp@npm:^1.0.3, mkdirp@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "mkdirp@npm:1.0.4"
+  bin:
+    mkdirp: bin/cmd.js
+  checksum: 10c0/46ea0f3ffa8bc6a5bc0c7081ffc3907777f0ed6516888d40a518c5111f8366d97d2678911ad1a6882bf592fa9de6c784fea32e1687bb94e1f4944170af48a5cf
+  languageName: node
+  linkType: hard
+
 "mkdirp@npm:^0.5.3, mkdirp@npm:^0.5.6":
   version: 0.5.6
   resolution: "mkdirp@npm:0.5.6"
@@ -12060,15 +12069,6 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: 10c0/e2e2be789218807b58abced04e7b49851d9e46e88a2f9539242cc8a92c9b5c3a0b9bab360bd3014e02a140fc4fbc58e31176c408b493f8a2a6f4986bd7527b01
-  languageName: node
-  linkType: hard
-
-"mkdirp@npm:^1.0.3, mkdirp@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "mkdirp@npm:1.0.4"
-  bin:
-    mkdirp: bin/cmd.js
-  checksum: 10c0/46ea0f3ffa8bc6a5bc0c7081ffc3907777f0ed6516888d40a518c5111f8366d97d2678911ad1a6882bf592fa9de6c784fea32e1687bb94e1f4944170af48a5cf
   languageName: node
   linkType: hard
 
@@ -12247,18 +12247,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ngx-bootstrap@npm:9.0.0":
-  version: 9.0.0
-  resolution: "ngx-bootstrap@npm:9.0.0"
+"ngx-bootstrap@npm:11.0.2":
+  version: 11.0.2
+  resolution: "ngx-bootstrap@npm:11.0.2"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/animations": ^14.0.0
-    "@angular/common": ^14.0.0
-    "@angular/core": ^14.0.0
-    "@angular/forms": ^14.0.0
-    rxjs: ^6.5.3 || ^7.4.0
-  checksum: 10c0/b7ebc90740384c6eea115091992c689b4f3cc3822991fc086ee4e2f64f3dde316cdcd1e78f79efeb4ae933c52329e64a0538193040eac1d09e17aa339b90bc7f
+    "@angular/animations": ^16.0.0
+    "@angular/common": ^16.0.0
+    "@angular/core": ^16.0.0
+    "@angular/forms": ^16.0.0
+    rxjs: ^6.5.3 || ^7.6.0
+  checksum: 10c0/667244afa89be9de2ba07495ce2f90b6b8e95d07fc26f6ecef737b6dca6436591535189a94a7c376d8a987973397bfd4f4109ec34ff86390dc6c8aa1c27fbaa3
   languageName: node
   linkType: hard
 
@@ -15188,12 +15188,12 @@ __metadata:
     jest-preset-angular: "npm:11.1.2"
     lodash: "npm:4.17.21"
     ng2-charts: "npm:2.4.3"
-    ngx-bootstrap: "npm:9.0.0"
+    ngx-bootstrap: "npm:11.0.2"
     ngx-infinite-scroll: "npm:14.0.1"
     prettier: "npm:2.6.2"
     rxjs: "npm:7.5.5"
     sass: "npm:1.49.11"
-    ts-jest: "npm:27.1.5"
+    ts-jest: "npm:27.0.0"
     tslib: "npm:2.3.1"
     tslint: "npm:6.1.3"
     typescript: "npm:4.9.3"
@@ -15397,7 +15397,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:27.1.5, ts-jest@npm:^27.0.0":
+"ts-jest@npm:27.0.0":
+  version: 27.0.0
+  resolution: "ts-jest@npm:27.0.0"
+  dependencies:
+    bs-logger: "npm:0.x"
+    buffer-from: "npm:1.x"
+    fast-json-stable-stringify: "npm:2.x"
+    jest-util: "npm:^27.0.0"
+    json5: "npm:2.x"
+    lodash: "npm:4.x"
+    make-error: "npm:1.x"
+    mkdirp: "npm:1.x"
+    semver: "npm:7.x"
+    yargs-parser: "npm:20.x"
+  peerDependencies:
+    jest: ^27.0.0
+    typescript: ">=3.8 <5.0"
+  bin:
+    ts-jest: cli.js
+  checksum: 10c0/422d1e50dff92e79f934bc5ac4bf6b97079e43d112321d255d76a457064f814d1e0b7ad332e147b7c4cf3005bb5158925815258aee65405f148f6819600f2351
+  languageName: node
+  linkType: hard
+
+"ts-jest@npm:^27.0.0":
   version: 27.1.5
   resolution: "ts-jest@npm:27.1.5"
   dependencies:
