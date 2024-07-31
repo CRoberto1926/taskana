@@ -10,28 +10,36 @@ import {
   Output,
   ViewChild
 } from '@angular/core';
-import { TreeNodeModel } from 'app/administration/models/tree-node';
+import {TreeNodeModel} from 'app/administration/models/tree-node';
 
-import { ITreeOptions, KEYS, TREE_ACTIONS, TreeComponent } from '@circlon/angular-tree-component';
-import { combineLatest, Observable, Subject } from 'rxjs';
-import { filter, map, takeUntil } from 'rxjs/operators';
-import { Select, Store } from '@ngxs/store';
-import { EngineConfigurationSelectors } from 'app/shared/store/engine-configuration-store/engine-configuration.selectors';
+import {ITreeOptions, KEYS, TREE_ACTIONS, TreeComponent} from '@ali-hm/angular-tree-component';
+import {combineLatest, Observable, Subject} from 'rxjs';
+import {filter, map, takeUntil} from 'rxjs/operators';
+import {Select, Store} from '@ngxs/store';
+import {
+  EngineConfigurationSelectors
+} from 'app/shared/store/engine-configuration-store/engine-configuration.selectors';
 
-import { Location } from '@angular/common';
-import { NotificationService } from 'app/shared/services/notifications/notification.service';
-import { Classification } from '../../../shared/models/classification';
-import { ClassificationsService } from '../../../shared/services/classifications/classifications.service';
-import { ClassificationCategoryImages } from '../../../shared/models/customisation';
-import { ClassificationSelectors } from '../../../shared/store/classification-store/classification.selectors';
+import {Location} from '@angular/common';
+import {NotificationService} from 'app/shared/services/notifications/notification.service';
+import {Classification} from '../../../shared/models/classification';
+import {
+  ClassificationsService
+} from '../../../shared/services/classifications/classifications.service';
+import {ClassificationCategoryImages} from '../../../shared/models/customisation';
+import {
+  ClassificationSelectors
+} from '../../../shared/store/classification-store/classification.selectors';
 import {
   DeselectClassification,
   SelectClassification,
   UpdateClassification
 } from '../../../shared/store/classification-store/classification.actions';
-import { ClassificationTreeService } from '../../services/classification-tree.service';
-import { Pair } from '../../../shared/models/pair';
-import { RequestInProgressService } from '../../../shared/services/request-in-progress/request-in-progress.service';
+import {ClassificationTreeService} from '../../services/classification-tree.service';
+import {Pair} from '../../../shared/models/pair';
+import {
+  RequestInProgressService
+} from '../../../shared/services/request-in-progress/request-in-progress.service';
 
 @Component({
   selector: 'taskana-administration-tree',
@@ -71,7 +79,7 @@ export class TaskanaTreeComponent implements OnInit, AfterViewChecked, OnDestroy
     allowDrop: true
   };
 
-  @ViewChild('tree', { static: true })
+  @ViewChild('tree', {static: true})
   private tree: TreeComponent;
 
   private filterTextOld: string;
@@ -79,14 +87,15 @@ export class TaskanaTreeComponent implements OnInit, AfterViewChecked, OnDestroy
   private destroy$ = new Subject<void>();
 
   constructor(
-    private elementRef: ElementRef,
-    private classificationsService: ClassificationsService,
-    private location: Location,
-    private store: Store,
-    private notificationsService: NotificationService,
-    private classificationTreeService: ClassificationTreeService,
-    private requestInProgressService: RequestInProgressService
-  ) {}
+      private elementRef: ElementRef,
+      private classificationsService: ClassificationsService,
+      private location: Location,
+      private store: Store,
+      private notificationsService: NotificationService,
+      private classificationTreeService: ClassificationTreeService,
+      private requestInProgressService: RequestInProgressService
+  ) {
+  }
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event) {
@@ -97,24 +106,24 @@ export class TaskanaTreeComponent implements OnInit, AfterViewChecked, OnDestroy
 
   ngOnInit() {
     const computedTreeNodes$: Observable<TreeNodeModel[]> = this.classifications$.pipe(
-      filter((classifications) => typeof classifications !== 'undefined'),
-      map((classifications) => this.classificationTreeService.transformToTreeNode(classifications))
+        filter((classifications) => typeof classifications !== 'undefined'),
+        map((classifications) => this.classificationTreeService.transformToTreeNode(classifications))
     );
 
     combineLatest([this.selectedClassificationId$, computedTreeNodes$])
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(([selectedClassificationId, treeNodes]) => {
-        this.treeNodes = treeNodes;
-        this.selectNodeId = typeof selectedClassificationId !== 'undefined' ? selectedClassificationId : undefined;
-        this.requestInProgressService.setRequestInProgress(false);
-        if (typeof this.tree.treeModel.getActiveNode() !== 'undefined') {
-          if (this.tree.treeModel.getActiveNode().data.classificationId !== this.selectNodeId) {
-            // wait for angular's two-way binding to convert the treeNodes to the internal tree structure.
-            // after that conversion the new treeNodes are available
-            setTimeout(() => this.selectNode(this.selectNodeId), 0);
-          }
+    .pipe(takeUntil(this.destroy$))
+    .subscribe(([selectedClassificationId, treeNodes]) => {
+      this.treeNodes = treeNodes;
+      this.selectNodeId = typeof selectedClassificationId !== 'undefined' ? selectedClassificationId : undefined;
+      this.requestInProgressService.setRequestInProgress(false);
+      if (typeof this.tree.treeModel.getActiveNode() !== 'undefined') {
+        if (this.tree.treeModel.getActiveNode().data.classificationId !== this.selectNodeId) {
+          // wait for angular's two-way binding to convert the treeNodes to the internal tree structure.
+          // after that conversion the new treeNodes are available
+          setTimeout(() => this.selectNode(this.selectNodeId), 0);
         }
-      });
+      }
+    });
 
     this.classificationTypeSelected$.pipe(takeUntil(this.destroy$)).subscribe(() => {
       if (this.tree.treeModel.getActiveNode()) {
@@ -183,8 +192,11 @@ export class TaskanaTreeComponent implements OnInit, AfterViewChecked, OnDestroy
 
   getCategoryIcon(category: string): Pair<string, string> {
     return this.categoryIcons[category]
-      ? { left: this.categoryIcons[category], right: category }
-      : { left: this.categoryIcons.missing, right: 'Category does not match with the configuration' };
+        ? {left: this.categoryIcons[category], right: category}
+        : {
+          left: this.categoryIcons.missing,
+          right: 'Category does not match with the configuration'
+        };
   }
 
   switchTaskanaSpinner(active: boolean) {
@@ -198,8 +210,8 @@ export class TaskanaTreeComponent implements OnInit, AfterViewChecked, OnDestroy
 
   private checkNameAndKey(node: any, text: string): boolean {
     return (
-      node.data.name.toUpperCase().includes(text.toUpperCase()) ||
-      node.data.key.toUpperCase().includes(text.toUpperCase())
+        node.data.name.toUpperCase().includes(text.toUpperCase()) ||
+        node.data.key.toUpperCase().includes(text.toUpperCase())
     );
   }
 
@@ -243,8 +255,8 @@ export class TaskanaTreeComponent implements OnInit, AfterViewChecked, OnDestroy
 
   private checkValidElements(event): boolean {
     return (
-      (this.elementRef.nativeElement.contains(event.target) || this.elementRef.nativeElement === event.target) &&
-      (event.target.localName === 'tree-viewport' || event.target.localName === 'taskana-tree')
+        (this.elementRef.nativeElement.contains(event.target) || this.elementRef.nativeElement === event.target) &&
+        (event.target.localName === 'tree-viewport' || event.target.localName === 'taskana-tree')
     );
   }
 
@@ -254,7 +266,7 @@ export class TaskanaTreeComponent implements OnInit, AfterViewChecked, OnDestroy
 
   private updateClassification(classification: Classification) {
     this.store.dispatch(new UpdateClassification(classification)).subscribe(() => {
-      this.notificationsService.showSuccess('CLASSIFICATION_MOVE', { classificationKey: classification.key });
+      this.notificationsService.showSuccess('CLASSIFICATION_MOVE', {classificationKey: classification.key});
       this.switchTaskanaSpinner(false);
     });
   }

@@ -12,6 +12,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ali-hm/angular-tree-component@npm:^12.0.5":
+  version: 12.0.5
+  resolution: "@ali-hm/angular-tree-component@npm:12.0.5"
+  dependencies:
+    mobx: "npm:~4.14.1"
+    tslib: "npm:^2.0.0"
+  peerDependencies:
+    "@angular/common": ">=14.0.0"
+    "@angular/core": ">=14.0.0"
+    mobx: ^6.10.2
+  checksum: 10c0/c3a7fae7250e575c1e0e75cca0078340e0eb5e165491a1b423f5ea6de298629978a91bea4956b5453cab326a3e78445e734e7f5c56ed7dd2eed0b4767d73cdca
+  languageName: node
+  linkType: hard
+
 "@ampproject/remapping@npm:2.2.0":
   version: 2.2.0
   resolution: "@ampproject/remapping@npm:2.2.0"
@@ -3193,19 +3207,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@circlon/angular-tree-component@npm:11.0.4":
-  version: 11.0.4
-  resolution: "@circlon/angular-tree-component@npm:11.0.4"
-  dependencies:
-    mobx: "npm:~4.14.1"
-    tslib: "npm:^2.0.0"
-  peerDependencies:
-    "@angular/common": ">=11.0.0"
-    "@angular/core": ">=11.0.0"
-  checksum: 10c0/417b2a1245388be4af2dd5f8640e289ba550547b261881afd328d46fc4ee92a8655cdf773ce6916b0eedce8ebd8fc6257cfd3ac967364b440b0f5a95039d9f35
-  languageName: node
-  linkType: hard
-
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -5277,15 +5278,6 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: 10c0/eebedbca185ac3c39dd5992ef18d9e2a9f99e7f3c2f52f5561f90e9ed482c5d224c7962db95362712f580ed5713264e777a98d8f0bd8747f4eadf62937baed16
-  languageName: node
-  linkType: hard
-
-"@types/chart.js@npm:^2.9.24":
-  version: 2.9.41
-  resolution: "@types/chart.js@npm:2.9.41"
-  dependencies:
-    moment: "npm:^2.10.2"
-  checksum: 10c0/5dd512aaff6caa2aef590b8e5ad74f424f9d74adafe1dbe5416e563c075762f832195771450e9bd99ada154e8969539850c69f7f6e9060b5742fdb463f20d6e5
   languageName: node
   linkType: hard
 
@@ -13324,19 +13316,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ng2-charts@npm:2.4.3":
-  version: 2.4.3
-  resolution: "ng2-charts@npm:2.4.3"
+"ng2-charts@npm:5.0.4":
+  version: 5.0.4
+  resolution: "ng2-charts@npm:5.0.4"
   dependencies:
-    "@types/chart.js": "npm:^2.9.24"
     lodash-es: "npm:^4.17.15"
-    tslib: "npm:^2.0.0"
+    tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/common": ">=7.2.0"
-    "@angular/core": ">=7.2.0"
-    chart.js: ^2.9.3
-    rxjs: ^6.3.3
-  checksum: 10c0/d81193ce3157a1d78cecd6fc181e836203c6a97ee9216ef9e2ee0c4a26a61902f318d0b787b91e0a31f8db133f6ebf2eacae53c63d2561e7f932d83710074469
+    "@angular/cdk": ">=16.0.0"
+    "@angular/common": ">=16.0.0"
+    "@angular/core": ">=16.0.0"
+    "@angular/platform-browser": ">=16.0.0"
+    chart.js: ^3.4.0 || ^4.0.0
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 10c0/09c423c4e0bb2e39b03377bbd611ff454c70c1191c8739792226f01faf6d2ed19a390c1acbd1a9e02013f2f32891c318d0013680af4535af806d7942337ebcc2
   languageName: node
   linkType: hard
 
@@ -16336,6 +16329,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "taskana@workspace:."
   dependencies:
+    "@ali-hm/angular-tree-component": "npm:^12.0.5"
     "@angular-builders/custom-webpack": "npm:13.1.0"
     "@angular-devkit/build-angular": "npm:16.2.14"
     "@angular/animations": "npm:16.2.12"
@@ -16350,7 +16344,6 @@ __metadata:
     "@angular/platform-browser": "npm:16.2.12"
     "@angular/platform-browser-dynamic": "npm:16.2.12"
     "@angular/router": "npm:16.2.12"
-    "@circlon/angular-tree-component": "npm:11.0.4"
     "@ngneat/hot-toast": "npm:4.1.0"
     "@ngneat/overview": "npm:3.0.4"
     "@ngxs/devtools-plugin": "npm:3.8.0"
@@ -16376,7 +16369,7 @@ __metadata:
     jest: "npm:29.7.0"
     jest-preset-angular: "npm:11.1.2"
     lodash: "npm:4.17.21"
-    ng2-charts: "npm:2.4.3"
+    ng2-charts: "npm:5.0.4"
     ngx-bootstrap: "npm:11.0.2"
     ngx-infinite-scroll: "npm:16.0.0"
     prettier: "npm:2.6.2"
