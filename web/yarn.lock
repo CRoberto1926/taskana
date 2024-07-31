@@ -3214,7 +3214,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/core@npm:^27.5.1":
+"@jest/core@npm:^27.0.0, @jest/core@npm:^27.5.1":
   version: 27.5.1
   resolution: "@jest/core@npm:27.5.1"
   dependencies:
@@ -10587,7 +10587,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-cli@npm:^27.5.1":
+"jest-cli@npm:^27.0.0":
   version: 27.5.1
   resolution: "jest-cli@npm:27.5.1"
   dependencies:
@@ -11042,21 +11042,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:27.5.1":
-  version: 27.5.1
-  resolution: "jest@npm:27.5.1"
+"jest@npm:27.0.0":
+  version: 27.0.0
+  resolution: "jest@npm:27.0.0"
   dependencies:
-    "@jest/core": "npm:^27.5.1"
+    "@jest/core": "npm:^27.0.0"
     import-local: "npm:^3.0.2"
-    jest-cli: "npm:^27.5.1"
+    jest-cli: "npm:^27.0.0"
   peerDependencies:
-    node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
+    node-notifier: ^8.0.1 || ^9.0.0
   peerDependenciesMeta:
     node-notifier:
       optional: true
   bin:
     jest: bin/jest.js
-  checksum: 10c0/c013d07e911e423612756bc42d376e578b8721d847db38d94344f9cdf8fdaa0241b0a5c2fe1aad7b7758d415e0b9517c1098312f0d03760f123958d5b6cf5597
+  checksum: 10c0/b09a99f363fef37006e201eff0c881ebd23b6fcf41134c4516ed5fc614de685e91079924abdb386d15f12953458b644ecd7e0d7e693b66b5fdcbece6e4e9ac74
   languageName: node
   linkType: hard
 
@@ -15184,7 +15184,7 @@ __metadata:
     eslint-plugin-import: "npm:2.26.0"
     eslint-plugin-prettier: "npm:4.0.0"
     file-saver: "npm:2.0.5"
-    jest: "npm:27.5.1"
+    jest: "npm:27.0.0"
     jest-preset-angular: "npm:11.1.2"
     lodash: "npm:4.17.21"
     ng2-charts: "npm:2.4.3"
