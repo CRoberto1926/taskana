@@ -16378,8 +16378,8 @@ __metadata:
     ts-jest: "npm:29.2.3"
     tslib: "npm:2.3.1"
     tslint: "npm:6.1.3"
-    typescript: "npm:4.9.3"
-    zone.js: "npm:0.13.3"
+    typescript: "npm:5.2"
+    zone.js: "npm:0.14.8"
   languageName: unknown
   linkType: soft
 
@@ -16890,23 +16890,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.9.3":
-  version: 4.9.3
-  resolution: "typescript@npm:4.9.3"
+"typescript@npm:5.2":
+  version: 5.2.2
+  resolution: "typescript@npm:5.2.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/bddcb0794f2b8aa52094b9de9d70848fdf46ccecac68403e1c407dc9f1a4e4e28979887acd648e1917b1144e5d8fbfb4c824309d8806d393b4194aa39c71fe5e
+  checksum: 10c0/91ae3e6193d0ddb8656d4c418a033f0f75dec5e077ebbc2bd6d76439b93f35683936ee1bdc0e9cf94ec76863aa49f27159b5788219b50e1cd0cd6d110aa34b07
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>":
-  version: 4.9.3
-  resolution: "typescript@patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=a66ed4"
+"typescript@patch:typescript@npm%3A5.2#optional!builtin<compat/typescript>":
+  version: 5.2.2
+  resolution: "typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/e5a7c3c6b75cf3eb2b6619fdc84f7ee434659413ace558da8b2c7270b21266be689ece5cf8e6bba529cdd3ea36d3c8ddac9c6d63e5f5c5224c1eac8785c92620
+  checksum: 10c0/062c1cee1990e6b9419ce8a55162b8dc917eb87f807e4de0327dbc1c2fa4e5f61bc0dd4e034d38ff541d1ed0479b53bcee8e4de3a4075c51a1724eb6216cb6f5
   languageName: node
   linkType: hard
 
@@ -17913,11 +17913,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zone.js@npm:0.13.3":
-  version: 0.13.3
-  resolution: "zone.js@npm:0.13.3"
-  dependencies:
-    tslib: "npm:^2.3.0"
-  checksum: 10c0/c2bfa9470c54742b319e81b617a95ddd72bbd4ee03dd5d4d68ae04f153490123fd38c96d2c40d70cf88722e8214b012842836a62cefb23f8f6282d3f7cc1d2b8
+"zone.js@npm:0.14.8":
+  version: 0.14.8
+  resolution: "zone.js@npm:0.14.8"
+  checksum: 10c0/9d5c70f084e7291887059fc7ed3131e4ba1b3d4d604923cbae133ae37be08ac9293d7becebe25a7055f4fd10252b72f427e839a17f5b9d2a7cb9e105d8530498
   languageName: node
   linkType: hard
