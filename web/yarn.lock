@@ -4333,42 +4333,42 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ngxs/devtools-plugin@npm:3.7.6":
-  version: 3.7.6
-  resolution: "@ngxs/devtools-plugin@npm:3.7.6"
+"@ngxs/devtools-plugin@npm:3.8.0":
+  version: 3.8.0
+  resolution: "@ngxs/devtools-plugin@npm:3.8.0"
   dependencies:
-    tslib: "npm:^1.9.0"
+    tslib: "npm:^2.2.0"
   peerDependencies:
     "@angular/core": ">=6.1.0 <16.0.0"
-    "@ngxs/store": ^3.7.6 || ^3.7.6-dev
+    "@ngxs/store": ^3.8.0 || ^3.8.0-dev
     rxjs: ">=6.5.5"
-  checksum: 10c0/bb5e0d4a8e1fb8a331212e7357aec0a30fd092298cf4a53702323b857263c3c3a155993db4cb0f5851c339a8dc1e84582864059c2d3e86bdf4706b5fbbbb6e54
+  checksum: 10c0/208f8064b1eee2e9d076bbfde59aaeb15f8bb63cb5620d68c36666de47d2bbdea8b00f8006a9a81d6d55d0235fcc2063f23fb68d7bf4eb6ceb4fe07cd488d93b
   languageName: node
   linkType: hard
 
-"@ngxs/router-plugin@npm:3.7.6":
-  version: 3.7.6
-  resolution: "@ngxs/router-plugin@npm:3.7.6"
+"@ngxs/router-plugin@npm:3.8.0":
+  version: 3.8.0
+  resolution: "@ngxs/router-plugin@npm:3.8.0"
   dependencies:
-    tslib: "npm:^1.9.0"
+    tslib: "npm:^2.2.0"
   peerDependencies:
     "@angular/core": ">=6.1.0 <16.0.0"
     "@angular/router": ">=6.1.0 <16.0.0"
-    "@ngxs/store": ^3.7.6 || ^3.7.6-dev
+    "@ngxs/store": ^3.8.0 || ^3.8.0-dev
     rxjs: ">=6.5.5"
-  checksum: 10c0/bc98437325d014515c2b26f9d5b7b0e77ea02d09ab6a47e4595cc5b0afc8fdc353e0ebf35ba0f0180c41fce73b794966d620d13b23c490e1948677357dbf1044
+  checksum: 10c0/a6c3248f123dac197bd7252177b4d13df460956bfe5da4cc5cda652d4d6f65f6b792449d1690313eccfc0225e00844acf3f0182f52e27079f71a142d6467fc2a
   languageName: node
   linkType: hard
 
-"@ngxs/store@npm:3.7.6":
-  version: 3.7.6
-  resolution: "@ngxs/store@npm:3.7.6"
+"@ngxs/store@npm:3.8.0":
+  version: 3.8.0
+  resolution: "@ngxs/store@npm:3.8.0"
   dependencies:
-    tslib: "npm:^1.9.0"
+    tslib: "npm:^2.2.0"
   peerDependencies:
     "@angular/core": ">=6.1.0 <16.0.0"
     rxjs: ">=6.5.5"
-  checksum: 10c0/38e9c0e9830712e9dfa0de6c0226e16fd5cf0cf9960d0eb1ebf67f35228225685536be12c920c0755298cc0e95f2eb673ede91f23ed78d8f0cdde04ae3c51cdd
+  checksum: 10c0/1884d14ab352d7fd5da4c293ab48bf970979b18bf7d55550c508a1612a444390ed21c8609ddfbaa2e0a1e4e8fbda3ae4b4b47a7f5f7645730a2dc3bb6b675752
   languageName: node
   linkType: hard
 
@@ -15164,9 +15164,9 @@ __metadata:
     "@circlon/angular-tree-component": "npm:11.0.4"
     "@ngneat/hot-toast": "npm:4.1.0"
     "@ngneat/overview": "npm:3.0.4"
-    "@ngxs/devtools-plugin": "npm:3.7.6"
-    "@ngxs/router-plugin": "npm:3.7.6"
-    "@ngxs/store": "npm:3.7.6"
+    "@ngxs/devtools-plugin": "npm:3.8.0"
+    "@ngxs/router-plugin": "npm:3.8.0"
+    "@ngxs/store": "npm:3.8.0"
     "@types/jest": "npm:27.4.1"
     "@types/lodash": "npm:4.14.181"
     "@types/node": "npm:17.0.23"
@@ -15505,6 +15505,13 @@ __metadata:
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 10c0/e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.2.0":
+  version: 2.6.3
+  resolution: "tslib@npm:2.6.3"
+  checksum: 10c0/2598aef53d9dbe711af75522464b2104724d6467b26a60f2bdac8297d2b5f1f6b86a71f61717384aa8fd897240467aaa7bcc36a0700a0faf751293d1331db39a
   languageName: node
   linkType: hard
 

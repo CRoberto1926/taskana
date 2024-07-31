@@ -1,8 +1,13 @@
-import { Action, NgxsOnInit, State, StateContext } from '@ngxs/store';
-import { Observable, of } from 'rxjs';
-import { WorkbasketQueryFilterParameter } from '../../models/workbasket-query-filter-parameter';
-import { ClearTaskFilter, ClearWorkbasketFilter, SetTaskFilter, SetWorkbasketFilter } from './filter.actions';
-import { TaskQueryFilterParameter } from '../../models/task-query-filter-parameter';
+import {Action, NgxsOnInit, State, StateContext} from '@ngxs/store';
+import {Observable, of} from 'rxjs';
+import {WorkbasketQueryFilterParameter} from '../../models/workbasket-query-filter-parameter';
+import {
+  ClearTaskFilter,
+  ClearWorkbasketFilter,
+  SetTaskFilter,
+  SetWorkbasketFilter
+} from './filter.actions';
+import {TaskQueryFilterParameter} from '../../models/task-query-filter-parameter';
 
 const emptyWorkbasketFilter: WorkbasketQueryFilterParameter = {
   'description-like': [],
@@ -22,7 +27,7 @@ const emptyTaskFilter: TaskQueryFilterParameter = {
   'wildcard-search-value': []
 };
 
-@State<FilterStateModel>({ name: 'FilterState' })
+@State<FilterStateModel>({name: 'FilterState'})
 export class FilterState implements NgxsOnInit {
   @Action(SetWorkbasketFilter)
   setWorkbasketFilter(ctx: StateContext<FilterStateModel>, action: SetWorkbasketFilter): Observable<null> {
@@ -48,7 +53,7 @@ export class FilterState implements NgxsOnInit {
   clearWorkbasketFilter(ctx: StateContext<FilterStateModel>, action: ClearWorkbasketFilter): Observable<null> {
     ctx.setState({
       ...ctx.getState(),
-      [action.component]: { ...emptyWorkbasketFilter }
+      [action.component]: {...emptyWorkbasketFilter}
     });
 
     return of(null);
@@ -57,13 +62,13 @@ export class FilterState implements NgxsOnInit {
   @Action(SetTaskFilter)
   setTaskFilter(ctx: StateContext<FilterStateModel>, action: SetTaskFilter): Observable<null> {
     const param = action.parameters;
-    let filter = { ...ctx.getState().tasks };
+    let filter = {...ctx.getState().tasks};
 
     Object.keys(param).forEach((key) => {
       filter[key] = [...param[key]];
     });
 
-    const isWildcardSearch = filter['wildcard-search-value'].length !== 0 && filter['wildcard-search-value'] !== [''];
+    const isWildcardSearch = filter['wildcard-search-value'].length !== 0;
     filter['wildcard-search-fields'] = isWildcardSearch ? this.initWildcardFields() : [];
 
     // Delete wildcard search field 'NAME' if 'name-like' exists
@@ -83,7 +88,7 @@ export class FilterState implements NgxsOnInit {
   clearTaskFilter(ctx: StateContext<FilterStateModel>): Observable<null> {
     ctx.setState({
       ...ctx.getState(),
-      tasks: { ...emptyTaskFilter }
+      tasks: {...emptyTaskFilter}
     });
 
     return of(null);
