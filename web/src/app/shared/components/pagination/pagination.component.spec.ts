@@ -1,19 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { PaginationComponent } from './pagination.component';
-import { DebugElement } from '@angular/core';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {PaginationComponent} from './pagination.component';
+import {DebugElement} from '@angular/core';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('PaginationComponent', () => {
   let fixture: ComponentFixture<PaginationComponent>;
   let debugElement: DebugElement;
   let component: PaginationComponent;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         MatPaginatorModule,
@@ -32,7 +32,7 @@ describe('PaginationComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
 
-    component.page = { totalPages: 10 };
+    component.page = {totalPages: 10};
     component.pageNumbers = [];
     for (let i = 1; i <= component.page.totalPages; i++) {
       component.pageNumbers.push(i);

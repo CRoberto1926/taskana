@@ -1,22 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
-import { SidenavListComponent } from './sidenav-list.component';
-import { SidenavService } from '../../services/sidenav/sidenav.service';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {DebugElement} from '@angular/core';
+import {SidenavListComponent} from './sidenav-list.component';
+import {SidenavService} from '../../services/sidenav/sidenav.service';
 
-import { BrowserModule, By } from '@angular/platform-browser';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { RouterModule } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
-import { TaskanaEngineService } from '../../services/taskana-engine/taskana-engine.service';
+import {BrowserModule, By} from '@angular/platform-browser';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {RouterModule} from '@angular/router';
+import {RouterTestingModule} from '@angular/router/testing';
+import {TaskanaEngineService} from '../../services/taskana-engine/taskana-engine.service';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import { EMPTY } from 'rxjs';
-import { RequestInProgressService } from '../../services/request-in-progress/request-in-progress.service';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {EMPTY} from 'rxjs';
+import {
+  RequestInProgressService
+} from '../../services/request-in-progress/request-in-progress.service';
 
 const SidenavServiceSpy: Partial<SidenavService> = {
   toggleSidenav: jest.fn().mockReturnValue(EMPTY)
@@ -33,7 +35,7 @@ describe('SidenavListComponent', () => {
   let fixture: ComponentFixture<SidenavListComponent>;
   let debugElement: DebugElement;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [SidenavListComponent],
       imports: [
@@ -50,8 +52,8 @@ describe('SidenavListComponent', () => {
       ],
       providers: [
         RequestInProgressService,
-        { provide: SidenavService, useValue: SidenavServiceSpy },
-        { provide: TaskanaEngineService, useValue: TaskanaEngineServiceSpy }
+        {provide: SidenavService, useValue: SidenavServiceSpy},
+        {provide: TaskanaEngineService, useValue: TaskanaEngineServiceSpy}
       ]
     }).compileComponents();
   }));
