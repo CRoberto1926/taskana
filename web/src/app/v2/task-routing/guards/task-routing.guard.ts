@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { TaskanaEngineService } from 'app/shared/services/taskana-engine/taskana-engine.service';
 import { catchError, map } from 'rxjs/operators';
@@ -7,7 +7,7 @@ import { catchError, map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class TaskRoutingGuard implements CanActivate {
+export class TaskRoutingGuard  {
   constructor(private taskanaEngineService: TaskanaEngineService, public router: Router) {}
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> {

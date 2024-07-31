@@ -1,9 +1,9 @@
-import { CanActivate, Router, UrlTree } from '@angular/router';
+import { Router, UrlTree } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { TaskanaEngineService } from 'app/shared/services/taskana-engine/taskana-engine.service';
 
 @Injectable()
-export class UserGuard implements CanActivate {
+export class UserGuard  {
   static roles = ['ADMIN', 'USER'];
 
   constructor(private taskanaEngineService: TaskanaEngineService, private router: Router) {}

@@ -1,9 +1,9 @@
-import { CanActivate, Router, UrlTree } from '@angular/router';
+import { Router, UrlTree } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { TaskanaEngineService } from 'app/shared/services/taskana-engine/taskana-engine.service';
 
 @Injectable()
-export class MonitorGuard implements CanActivate {
+export class MonitorGuard  {
   static roles = ['ADMIN', 'MONITOR'];
 
   constructor(private taskanaEngineService: TaskanaEngineService, public router: Router) {}

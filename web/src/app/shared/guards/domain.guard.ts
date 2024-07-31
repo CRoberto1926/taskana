@@ -1,11 +1,11 @@
 import { of } from 'rxjs';
-import { CanActivate } from '@angular/router';
+
 import { Injectable } from '@angular/core';
 import { DomainService } from 'app/shared/services/domain/domain.service';
 import { catchError, map } from 'rxjs/operators';
 
 @Injectable()
-export class DomainGuard implements CanActivate {
+export class DomainGuard  {
   constructor(private domainService: DomainService) {}
 
   canActivate() {
