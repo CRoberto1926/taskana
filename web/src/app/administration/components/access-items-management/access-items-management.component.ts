@@ -23,7 +23,7 @@ import {
   RemoveAccessItemsPermissions
 } from '../../../shared/store/access-items-management-store/access-items-management.actions';
 import { AccessItemsManagementSelector } from '../../../shared/store/access-items-management-store/access-items-management.selector';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { WorkbasketAccessItemQueryFilterParameter } from '../../../shared/models/workbasket-access-item-query-filter-parameter';
 
 @Component({

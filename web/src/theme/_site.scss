@@ -495,10 +495,13 @@ li.list-group-item:hover {
 .cdk-overlay-container {
   z-index: 1337;
 }
-.mat-menu-content {
+.mat-mdc-menu-content {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+/*
+ TODO(mdc-migration): The following rule targets internal classes of select that may no longer apply for the MDC version.
+ */
 .mat-select-value-text {
   color: #4a5568 !important;
 }

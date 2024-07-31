@@ -10,7 +10,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { Page } from 'app/shared/models/page';
-import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
+import { MatPaginator } from '@angular/material/paginator';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 

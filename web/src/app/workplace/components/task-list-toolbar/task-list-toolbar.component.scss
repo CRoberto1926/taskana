@@ -39,16 +39,18 @@
   }
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version.*/
 ::ng-deep
   .task-list-toolbar
-  > .mat-tab-group
-  > .mat-tab-header
+  > .mat-mdc-tab-group
+  > .mat-mdc-tab-header
   > .mat-tab-label-container
   > .mat-tab-list
   > .mat-tab-labels {
   background-color: $light-grey;
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version.*/
 ::ng-deep .task-list-toolbar__filter-input .mat-form-field-wrapper {
   width: 240px;
 }

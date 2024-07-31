@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogPopUpComponent } from '../../components/popup/dialog-pop-up.component';
 import { HotToastService } from '@ngneat/hot-toast';
 import { ObtainMessageService } from '../obtain-message/obtain-message.service';

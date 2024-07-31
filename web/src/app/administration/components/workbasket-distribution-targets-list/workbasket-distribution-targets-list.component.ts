@@ -12,7 +12,7 @@ import {
 import { isEqual } from 'lodash';
 import { WorkbasketSummary } from 'app/shared/models/workbasket-summary';
 import { expandDown } from 'app/shared/animations/expand.animation';
-import { MatLegacySelectionList as MatSelectionList } from '@angular/material/legacy-list';
+import { MatSelectionList } from '@angular/material/list';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import { Side } from '../../models/workbasket-distribution-enums';
 import { Select, Store } from '@ngxs/store';

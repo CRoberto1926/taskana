@@ -379,20 +379,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/cdk@npm:16.2.14":
-  version: 16.2.14
-  resolution: "@angular/cdk@npm:16.2.14"
+"@angular/cdk@npm:17.3.10":
+  version: 17.3.10
+  resolution: "@angular/cdk@npm:17.3.10"
   dependencies:
     parse5: "npm:^7.1.2"
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/common": ^16.0.0 || ^17.0.0
-    "@angular/core": ^16.0.0 || ^17.0.0
+    "@angular/common": ^17.0.0 || ^18.0.0
+    "@angular/core": ^17.0.0 || ^18.0.0
     rxjs: ^6.5.3 || ^7.4.0
   dependenciesMeta:
     parse5:
       optional: true
-  checksum: 10c0/b68260f24bb25b53149a4b176245aad28611c761949fd4a9978fd592969336b0f251a9baf7741c0e6530e9f434e014a716a6d1c3b897580a0227361c9b6cf24e
+  checksum: 10c0/96c57b39007346ce2d1f6ad369bca3b9017354965e5a212561f25e59b82fccf5e6791d995a043f2d55e6840c9c5996205bdd0713eb448c2f3702a35d270d6b0c
   languageName: node
   linkType: hard
 
@@ -499,7 +499,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/material@npm:16.2.14":
+"@angular/material@npm:^16.2.0":
   version: 16.2.14
   resolution: "@angular/material@npm:16.2.14"
   dependencies:
@@ -16140,14 +16140,14 @@ __metadata:
     "@angular-builders/custom-webpack": "npm:13.1.0"
     "@angular-devkit/build-angular": "npm:17.3.8"
     "@angular/animations": "npm:17.3.12"
-    "@angular/cdk": "npm:16.2.14"
+    "@angular/cdk": "npm:17.3.10"
     "@angular/cli": "npm:17.3.8"
     "@angular/common": "npm:17.3.12"
     "@angular/compiler": "npm:17.3.12"
     "@angular/compiler-cli": "npm:17.3.12"
     "@angular/core": "npm:17.3.12"
     "@angular/forms": "npm:17.3.12"
-    "@angular/material": "npm:16.2.14"
+    "@angular/material": "npm:^16.2.0"
     "@angular/platform-browser": "npm:17.3.12"
     "@angular/platform-browser-dynamic": "npm:17.3.12"
     "@angular/router": "npm:17.3.12"

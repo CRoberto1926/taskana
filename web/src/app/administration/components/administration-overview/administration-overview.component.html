@@ -17,7 +17,7 @@
        routerLink="/taskana/administration/task-routing">Task Routing</a>
   </nav>
   <div class="administration-overview__domain">
-    <mat-form-field appearance="legacy">
+    <mat-form-field>
       <mat-select [value]="selectedDomain" matTooltip="Select domain">
         <mat-option (click)="switchDomain(domain)" *ngFor="let domain of domains" [value]="domain">
           {{domain ? domain : 'MASTER DOMAIN'}}

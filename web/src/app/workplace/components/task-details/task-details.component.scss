@@ -79,15 +79,17 @@
   }
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version. */
 ::ng-deep .mat-tab-body-wrapper {
   height: 100%;
   max-height: calc(100vh - 182px);
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version. */
 ::ng-deep
   .task-details__tab-group-wrapper
-  > .mat-tab-group
-  > .mat-tab-header
+  > .mat-mdc-tab-group
+  > .mat-mdc-tab-header
   > .mat-tab-label-container
   > .mat-tab-list
   > .mat-tab-labels

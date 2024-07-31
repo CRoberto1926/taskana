@@ -23,9 +23,9 @@ import {IconTypeComponent} from 'app/administration/components/type-icon/icon-ty
 import {
   FieldErrorDisplayComponent
 } from 'app/shared/components/field-error-display/field-error-display.component';
-import {MatLegacyDialogModule as MatDialogModule} from '@angular/material/legacy-dialog';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular/material/legacy-button';
-import {MatLegacyRadioModule as MatRadioModule} from '@angular/material/legacy-radio';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import {MatRadioModule} from '@angular/material/radio';
 import {SortComponent} from './components/sort/sort.component';
 import {PaginationComponent} from './components/pagination/pagination.component';
 import {ProgressSpinnerComponent} from './components/progress-spinner/progress-spinner.component';
@@ -49,19 +49,19 @@ import {
   HttpClientInterceptor
 } from './services/http-client-interceptor/http-client-interceptor.service';
 import {DialogPopUpComponent} from './components/popup/dialog-pop-up.component';
-import {MatLegacyFormFieldModule as MatFormFieldModule} from '@angular/material/legacy-form-field';
-import {MatLegacyInputModule as MatInputModule} from '@angular/material/legacy-input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
-import {MatLegacyMenuModule as MatMenuModule} from '@angular/material/legacy-menu';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular/material/legacy-tooltip';
-import {MatLegacyPaginatorModule as MatPaginatorModule} from '@angular/material/legacy-paginator';
-import {MatLegacySelectModule as MatSelectModule} from '@angular/material/legacy-select';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSelectModule} from '@angular/material/select';
 import {
-  MatLegacyAutocompleteModule as MatAutocompleteModule
-} from '@angular/material/legacy-autocomplete';
+  MatAutocompleteModule
+} from '@angular/material/autocomplete';
 import {
-  MatLegacyProgressSpinnerModule as MatProgressSpinnerModule
-} from '@angular/material/legacy-progress-spinner';
+  MatProgressSpinnerModule
+} from '@angular/material/progress-spinner';
 import {
   WorkbasketFilterComponent
 } from './components/workbasket-filter/workbasket-filter.component';
