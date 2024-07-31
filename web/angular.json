@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "taskana-web:build"
+            "buildTarget": "taskana-web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "taskana-web:build:production"
+              "buildTarget": "taskana-web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "taskana-web:build"
+            "buildTarget": "taskana-web:build"
           }
         }
       }
