@@ -1,5 +1,5 @@
-@import 'colors';
-@import 'mixin/colors';
+@import './colors';
+@import './mixin/colors';
 
 @mixin degraded-bar($direction, $width, $height) {
   display: block;

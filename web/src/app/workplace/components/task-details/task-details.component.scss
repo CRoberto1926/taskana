@@ -1,4 +1,4 @@
-@import '../../../../theme/colors';
+@import 'colors';
 
 :host {
   flex-grow: 1;
@@ -87,13 +87,13 @@
 
 /* TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version. */
 ::ng-deep
-  .task-details__tab-group-wrapper
-  > .mat-mdc-tab-group
-  > .mat-mdc-tab-header
-  > .mat-tab-label-container
-  > .mat-tab-list
-  > .mat-tab-labels
-  > .mat-tab-label {
+.task-details__tab-group-wrapper
+> .mat-mdc-tab-group
+> .mat-mdc-tab-header
+> .mat-tab-label-container
+> .mat-tab-list
+> .mat-tab-labels
+> .mat-tab-label {
   min-width: 0 !important;
   height: 36px !important;
 }

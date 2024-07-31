@@ -1,4 +1,4 @@
-@import 'src/theme/_colors.scss';
+@import 'colors';
 
 .task-list-toolbar {
   // padding: 4px 16px 16px 16px;
@@ -41,12 +41,12 @@
 
 /* TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version.*/
 ::ng-deep
-  .task-list-toolbar
-  > .mat-mdc-tab-group
-  > .mat-mdc-tab-header
-  > .mat-tab-label-container
-  > .mat-tab-list
-  > .mat-tab-labels {
+.task-list-toolbar
+> .mat-mdc-tab-group
+> .mat-mdc-tab-header
+> .mat-tab-label-container
+> .mat-tab-list
+> .mat-tab-labels {
   background-color: $light-grey;
 }
 

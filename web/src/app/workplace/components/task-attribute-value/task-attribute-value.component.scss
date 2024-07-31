@@ -1,4 +1,4 @@
-@import 'src/theme/_colors.scss';
+@import 'colors';
 
 .task-attribute-value {
   line-height: 1.5;
@@ -62,11 +62,11 @@
 
 /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
 ::ng-deep
-  .task-attribute-value__column--inputs
-  > .mat-form-field-appearance-outline
-  > div.mat-form-field-wrapper
-  > div.mat-form-field-flex
-  > div.mat-form-field-infix {
+.task-attribute-value__column--inputs
+> .mat-form-field-appearance-outline
+> div.mat-form-field-wrapper
+> div.mat-form-field-flex
+> div.mat-form-field-infix {
   border-top-width: 0;
   height: 40px;
 }

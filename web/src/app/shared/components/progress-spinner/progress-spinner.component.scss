@@ -1,4 +1,4 @@
-@import 'src/theme/_colors.scss';
+@import 'colors';
 
 .progress-spinner-component {
   z-index: 3000;
@@ -8,9 +8,11 @@
   left: 50%;
   top: 33%;
   margin-left: -85px;
+
   > .item {
     margin-left: 10px;
   }
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

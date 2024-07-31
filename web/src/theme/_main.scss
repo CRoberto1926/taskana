@@ -1,17 +1,17 @@
 @import '../../node_modules/@ali-hm/angular-tree-component/css/angular-tree-component.css';
 
-@import 'variables';
-@import 'material_styles';
-@import 'site';
-@import 'forms';
-@import 'tree';
-@import 'type-ahead';
-@import 'checkboxes';
-@import 'buttons';
-@import 'tabs';
-@import 'table';
-@import 'mixin/colors';
-@import 'progress-bar';
-@import 'shameful';
+@import './variables';
+@import './material_styles';
+@import './site';
+@import './forms';
+@import './tree';
+@import './type-ahead';
+@import './checkboxes';
+@import './buttons';
+@import './tabs';
+@import './table';
+@import './mixin/colors';
+@import './progress-bar';
+@import './shameful';
 
-@import 'bootstrap-replacement';
+@import './bootstrap-replacement';

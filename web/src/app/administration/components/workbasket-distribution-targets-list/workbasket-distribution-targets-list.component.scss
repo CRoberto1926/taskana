@@ -1,4 +1,5 @@
-@import 'src/theme/_colors.scss';
+@import 'colors';
+
 .distribution-targets-list {
   &__header {
     text-overflow: ellipsis;
@@ -8,6 +9,7 @@
       max-width: 100px;
     }
   }
+
   &__action-button {
     margin-left: 0.5rem;
   }
@@ -24,6 +26,7 @@
       min-height: 83px;
     }
   }
+
   &__list--with-filter {
     min-width: 100%;
     background-color: white;
@@ -36,16 +39,20 @@
       min-height: 83px;
     }
   }
+
   &__item-wrapper {
     display: flex;
   }
+
   &__item-icon {
     padding: 32px 24px 24px 8px;
   }
+
   &__item-info {
     display: block;
     padding: 8px 0;
   }
+
   &__empty-list {
     height: calc(100vh - 360px);
     border-radius: 10px;
