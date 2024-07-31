@@ -12262,15 +12262,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ngx-infinite-scroll@npm:14.0.1":
-  version: 14.0.1
-  resolution: "ngx-infinite-scroll@npm:14.0.1"
+"ngx-infinite-scroll@npm:16.0.0":
+  version: 16.0.0
+  resolution: "ngx-infinite-scroll@npm:16.0.0"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/common": ">=14.0.0 <15.0.0"
-    "@angular/core": ">=14.0.0 <15.0.0"
-  checksum: 10c0/f455c249f427417f067c580ed129dde928904075f16b71ff7291ef907b175401ac52c72a29cc3520ab0f6103bbdb695e586c5f1d034818853274d103a0cb90b0
+    "@angular/common": ">=16.0.0 <17.0.0"
+    "@angular/core": ">=16.0.0 <17.0.0"
+  checksum: 10c0/031a945c54e83dda9100fc86bd5b38bec095ed85cda6ca294f3c6c05ce4de95bcd139f5d85edb19a5d22d1e09330f4903e529e9bd583331a858f69f76286e313
   languageName: node
   linkType: hard
 
@@ -15189,7 +15189,7 @@ __metadata:
     lodash: "npm:4.17.21"
     ng2-charts: "npm:2.4.3"
     ngx-bootstrap: "npm:11.0.2"
-    ngx-infinite-scroll: "npm:14.0.1"
+    ngx-infinite-scroll: "npm:16.0.0"
     prettier: "npm:2.6.2"
     rxjs: "npm:7.5.5"
     sass: "npm:1.49.11"
