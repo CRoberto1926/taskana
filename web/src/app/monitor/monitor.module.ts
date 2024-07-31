@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {AlertModule} from 'ngx-bootstrap/alert';
 import {TabsModule} from 'ngx-bootstrap/tabs';
@@ -59,7 +58,6 @@ const MODULES = [
   AlertModule.forRoot(),
   NgChartsModule,
   TabsModule.forRoot(),
-  HttpClientModule,
   AngularSvgIconModule,
   SharedModule,
   MatTabsModule,

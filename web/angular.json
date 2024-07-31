@@ -69,13 +69,13 @@
           }
         },
         "serve": {
-          "builder": "@angular/build:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "buildTarget": "taskana-web:build"
+            "browserTarget": "taskana-web:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "taskana-web:build:production"
+              "browserTarget": "taskana-web:build:production"
             }
           }
         },

@@ -4,7 +4,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {APP_INITIALIZER, NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {} from '@angular/common/http';
 import {NgxsModule} from '@ngxs/store';
 import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
 import {AlertModule} from 'ngx-bootstrap/alert';
@@ -20,13 +19,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {
-  MatProgressBarModule
-} from '@angular/material/progress-bar';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSelectModule} from '@angular/material/select';
-import {
-  MatProgressSpinnerModule
-} from '@angular/material/progress-spinner';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 /**
  * Services
@@ -83,7 +78,6 @@ const MODULES = [
   FormsModule,
   AppRoutingModule,
   AngularSvgIconModule.forRoot(),
-  HttpClientModule,
   BrowserAnimationsModule,
   ReactiveFormsModule,
   TreeModule,
@@ -100,8 +94,7 @@ const MODULES = [
   MatProgressSpinnerModule,
   NgxsModule.forRoot(STATES, {developmentMode: !environment.production}),
   NgxsReduxDevtoolsPluginModule.forRoot({disabled: environment.production, maxAge: 25}),
-  NgxsRouterPluginModule.forRoot(),
-  HttpClientXsrfModule
+  NgxsRouterPluginModule.forRoot()
 ];
 
 const PROVIDERS = [

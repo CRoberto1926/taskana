@@ -1,14 +1,13 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AngularSvgIconModule} from 'angular-svg-icon';
 import {RouterModule} from '@angular/router';
 import {TreeModule} from '@ali-hm/angular-tree-component';
 import {AlertModule} from 'ngx-bootstrap/alert';
 import {TypeaheadModule} from 'ngx-bootstrap/typeahead';
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
-import {HotToastModule} from '@ngneat/hot-toast';
 import {AccordionModule} from 'ngx-bootstrap/accordion';
 
 /**
@@ -56,12 +55,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSelectModule} from '@angular/material/select';
-import {
-  MatAutocompleteModule
-} from '@angular/material/autocomplete';
-import {
-  MatProgressSpinnerModule
-} from '@angular/material/progress-spinner';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {
   WorkbasketFilterComponent
 } from './components/workbasket-filter/workbasket-filter.component';
@@ -73,6 +68,7 @@ import {AccessIdsService} from './services/access-ids/access-ids.service';
 import {DragAndDropDirective} from './directives/drag-and-drop.directive';
 import {GermanTimeFormatPipe} from './pipes/german-time-format.pipe';
 import {ResizableWidthDirective} from './directives/resizable-width.directive';
+import {HotToastModule} from "@ngneat/hot-toast";
 
 const MODULES = [
   CommonModule,
@@ -82,7 +78,6 @@ const MODULES = [
   AccordionModule.forRoot(),
   BsDatepickerModule.forRoot(),
   AngularSvgIconModule,
-  HttpClientModule,
   MatDialogModule,
   MatButtonModule,
   RouterModule,
